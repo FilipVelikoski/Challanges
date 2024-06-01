@@ -144,3 +144,48 @@ h1 {
   width: 300px;
   height: 300px;
 }
+
+.section-2 {
+  background-color: #302d2d;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.wrap1 {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.cards-cont {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.card {
+  flex-basis: 33.3333%;
+  color: white;
+  text-align: center;
+  padding: 10px 60px;
+}
+
+.second-title {
+  color: white;
+  text-align: center;
+}
+
+.icon {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.lighter-text {
+  color: #889096;
+  padding-top: 10px;
+}
+
+.border {
+  border: 1px solid white;
+  width: 3%;
+  margin: 50px auto;
+}
