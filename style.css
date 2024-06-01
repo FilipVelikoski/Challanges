@@ -109,3 +109,38 @@ h1 {
   display: none;
   color: white;
 }
+
+.section-1 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.wrap {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.section-1 .inner {
+  display: flex;
+}
+
+.section-1 .content-box {
+  flex-basis: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-1 .inner .image-box {
+  flex-basis: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.section-1 .image-box img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
