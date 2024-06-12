@@ -1,0 +1,97 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  overflow: auto;
+
+  @include mix.tablet-styles {
+    position: static;
+    width: 100%;
+  }
+
+  .navbar-inner {
+    padding: var.$gutter-base * 2;
+
+    @include mix.tablet-styles {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: block;
+      margin-bottom: var.$gutter-base * 2;
+
+      @include mix.tablet-styles {
+        width: 100px;
+        margin-bottom: 0;
+      }
+    }
+
+    @include mix.tablet-styles {
+      padding: math.div(var.$gutter-base, 2);
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      line-height: 1.7;
+      margin-top: var.$gutter-base;
+
+      @include mix.tablet-styles {
+        display: none;
+      }
+
+      & li:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      li a {
+        text-decoration: none;
+        color: var.$text-color-secondary;
+
+        &:hover {
+          border-bottom: 1px solid var.$border-color;
+        }
+      }
+    }
+
+    .hamburger-menu {
+      color: var.$text-color-secondary;
+      display: none;
+      font-size: 30px;
+      border: 1px solid var.$border-color;
+      padding: 0 (math.div(var.$gutter-base, 2));
+
+      @include mix.tablet-styles {
+        display: block;
+      }
+    }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    top: 50%;
+    font-size: math.div(var.$font-size-small, 2);
+    padding: var.$gutter-base * 2;
+    color: var.$text-color-secondary;
+
+    a {
+      text-decoration: none;
+      font-weight: var.$font-weight-bold;
+      color: var.$text-color-base;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
