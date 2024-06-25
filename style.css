@@ -121,3 +121,24 @@ footer {
 .img-staff {
   height: 20vh;
 }
+
+/* responsive */
+@media screen and (max-width: 768px) {
+  .banner-image .inner {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .banner-image .inner {
+    width: 100%;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .img-gallery {
+    height: 50vh;
+  }
+}
