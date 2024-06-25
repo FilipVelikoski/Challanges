@@ -11,6 +11,10 @@
   border: none;
 }
 
+.navbar {
+  --bs-navbar-toggler-focus-width: none;
+}
+
 img {
   height: 70vh;
 }
