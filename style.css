@@ -1,0 +1,61 @@
+.navbar-nav {
+  --bs-navbar-color: #7a7a7a;
+  --bs-nav-link-hover-color: white;
+}
+
+.navbar-brand {
+  --bs-navbar-brand-color: #7a7a7a;
+}
+
+.navbar-toggler-icon {
+  border: none;
+}
+
+img {
+  height: 70vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-item {
+    transition: 1s;
+  }
+}
+
+.carousel-caption {
+  bottom: auto;
+  right: auto;
+  left: auto;
+}
+
+.section-3 {
+  height: 200px;
+  background: url(./images/lights.jpg);
+  text-align: center;
+  color: #fff;
+  padding-top: 3.75rem;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.section-5 {
+  height: 200px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url(./images/media.jpg);
+  text-align: center;
+  color: #fff;
+  padding-top: 3.75rem;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.section-7 {
+  background-color: #333333;
+}
+
+footer {
+  background-color: black;
+}
