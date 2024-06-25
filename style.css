@@ -111,3 +111,13 @@ footer {
   --bs-accordion-btn-icon: none;
   --bs-accordion-btn-active-icon: none;
 }
+
+/* contact section */
+
+.staff-section {
+  background-color: #333333;
+}
+
+.img-staff {
+  height: 20vh;
+}
