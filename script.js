@@ -20,7 +20,7 @@ const weatherData = [
   { city: "Chicago", temperature: 10, humidity: 65, windSpeed: 7 },
   { city: "Shanghai", temperature: 19, humidity: 80, windSpeed: 6 },
 ];
-// Select element
+// Select elements
 const searchCity = document.querySelector("#cityName");
 const weatherDisplay = document.querySelector("#weatherDisplay");
 const forecastDisplay = document.querySelector("#forecastDisplay");
@@ -48,17 +48,73 @@ function displayCurrentWeather(data) {
   }
 }
 
-function fetchForecast(city) {}
+// Exercise 02
+function fetchForecast(city) {
+  const weather = fetchWeather(city);
+  if (weather) {
+    const forecast = [];
+    let currentTemp = weather.temperature;
 
-function displayForecast(data) {}
+    for (let i = 1; i <= 5; i++) {
+      forecast.push({
+        day: `Day: ${i}`,
+        temperature: `Temperature: ${currentTemp + i}`,
+      });
+    }
+    return forecast;
+  } else {
+    return null;
+  }
+}
+
+function displayForecast(data) {
+  if (data) {
+    forecastDisplay.innerHTML = data
+      .map((day) => `<p>${day.day}: ${day.temperature}°C</p>`)
+      .join("");
+  } else {
+    alert("City not found for forecast");
+  }
+}
 
 function searchWeather() {
   const searchValue = searchCity.value;
-  searchCity.value = "";
   const data = fetchWeather(searchValue);
   displayCurrentWeather(data);
+
+  const forecast = fetchForecast(searchValue);
+  searchCity.value = "";
+  saveRecentSearch(searchValue);
+  displayForecast(forecast);
+  displayRecentSearches();
 }
 
 // Exercise 03: Save recent searches to local storage
-function saveRecentSearch(city) {}
-function displayRecentSearches() {}
+function saveRecentSearch(city) {
+  let recentSearch = JSON.parse(localStorage.getItem("recentSearch")) || [];
+
+  if (!recentSearch.includes(city)) {
+    recentSearch.push(city);
+
+    localStorage.setItem("recentSearch", JSON.stringify(recentSearch));
+  }
+}
+function displayRecentSearches() {
+  let recentSearch = JSON.parse(localStorage.getItem("recentSearch")) || [];
+
+  if (recentSearch.length > 0) {
+    recentSearches.innerHTML = recentSearch
+      .map((city) => `<p class="card p-3 recentSearch" >${city}</p>`)
+      .join(" ");
+  }
+
+  document.querySelectorAll(".recentSearch").forEach((cityElement) => {
+    cityElement.style.cursor = "pointer";
+    cityElement.addEventListener("click", () => {
+      searchCity.value = cityElement.textContent;
+      searchWeather();
+    });
+  });
+}
+
+displayRecentSearches();
