@@ -20,16 +20,44 @@ const weatherData = [
   { city: "Chicago", temperature: 10, humidity: 65, windSpeed: 7 },
   { city: "Shanghai", temperature: 19, humidity: 80, windSpeed: 6 },
 ];
+// Select element
+const searchCity = document.querySelector("#cityName");
+const weatherDisplay = document.querySelector("#weatherDisplay");
+const forecastDisplay = document.querySelector("#forecastDisplay");
+const recentSearches = document.querySelector("#recentSearches");
 
-function fetchWeather(city) {}
+// Exercise 01
+function fetchWeather(city) {
+  const capitalCity = city.toLowerCase();
+  return weatherData.find((data) =>
+    data.city.toLowerCase().includes(capitalCity)
+  );
+}
 
-function displayCurrentWeather(data) {}
+function displayCurrentWeather(data) {
+  if (data) {
+    weatherDisplay.innerHTML = `
+          <h2>Current Weather for  ${data.city}</h2>
+          <p>Temperature: ${data.temperature}°C</p>
+          <p>Humidity: ${data.humidity}%</p>
+          <p>Wind Speed: ${data.windSpeed} m/s</p>
+          <h2>5-day Forcast for ${data.city}</h2>
+        `;
+  } else {
+    alert("City not found");
+  }
+}
 
 function fetchForecast(city) {}
 
 function displayForecast(data) {}
 
-function searchWeather() {}
+function searchWeather() {
+  const searchValue = searchCity.value;
+  searchCity.value = "";
+  const data = fetchWeather(searchValue);
+  displayCurrentWeather(data);
+}
 
 // Exercise 03: Save recent searches to local storage
 function saveRecentSearch(city) {}
