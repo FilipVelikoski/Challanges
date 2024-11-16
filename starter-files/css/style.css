@@ -1,0 +1,196 @@
+body {
+  background-color: #e7e7e7;
+}
+
+.wrapper-width {
+  width: 90%;
+  background-color: white;
+  margin: 0 auto;
+}
+/* nav */
+
+.line {
+  border: 1px solid #d3d3d3;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.logo {
+  height: 5vh;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: end;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-right: 10px;
+  color: black;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  border: 1px solid #d3d3d3;
+  color: orange;
+  background-color: #d3d3d3;
+}
+
+.icons {
+  display: flex;
+  margin-right: 10px;
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.icons:hover {
+  color: orange;
+}
+
+/* filter sidebar and bikes container */
+.card {
+  border: none;
+  background-color: transparent;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.number-bikes {
+  border: 1px solid grey;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: gray;
+  color: black;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hover-group:hover .show-all,
+.hover-group:hover .number-bikes,
+.hover-group:hover p {
+  color: orange;
+}
+
+.hover-group:hover .number-bikes {
+  background-color: orange;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 1px solid orange;
+}
+
+.line-filter {
+  border: 1px solid #d3d3d3;
+  margin-top: 15px;
+  width: 15%;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-basis: 50%;
+}
+
+.bike-img {
+  height: 20vh;
+}
+
+.card-inner {
+  background-color: orange;
+}
+.bikes-container {
+  display: flex;
+  flex-basis: 33.333%;
+}
+.bikes-container .card {
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.bikes-container .card:hover {
+  border: 2px solid orange;
+  cursor: pointer;
+}
+.bikes-container .card-body {
+  background-color: orange;
+  padding: 10px;
+  color: black;
+}
+
+.row {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.active-filter {
+  color: orange;
+}
+
+.active-number {
+  background-color: orange;
+  border: 1px solid orange;
+}
+
+/* footer */
+footer {
+  background-color: #f8f8f8;
+}
+
+footer .card {
+  margin-bottom: 50px;
+}
+
+.footer-link:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+  border: 1px solid orange;
+  background-color: orange;
+  padding: 20px;
+}
+
+.social-icons a:hover {
+  background-color: gray;
+  border: 1px solid gray;
+}
+.border-left {
+  position: relative;
+}
+.border-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 2px;
+  height: 90%;
+  background-color: #d3d3d3;
+  z-index: 1;
+}
+
+/*use color:orange for the orange color*/
+/*use background-color: #d3d3d3; color: #5c5c5c; for the badges*/
+/*use color:grey for the social-share icons on hover*/
