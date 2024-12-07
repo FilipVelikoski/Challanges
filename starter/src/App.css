@@ -48,3 +48,153 @@ h3 {
     font-size: 1.25rem; /* var.$font-size-medium */
   }
 }
+
+/* Banner  Section*/
+.banner-image {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, -0.4), rgba(0, 0, 0, 0.8)),
+    url("https://picsum.photos/id/13/1920/1080");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.inner {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  margin: 0 auto;
+}
+
+.inner h1 {
+  font-size: 80px;
+}
+
+/* Details Section */
+.section {
+  color: orange;
+  text-transform: uppercase;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 1px;
+  /* width: 30%; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.img {
+  max-width: 400px;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.img-details {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Place Section */
+.place-card {
+  position: relative;
+  border: none;
+  border-radius: 0px;
+  overflow: hidden;
+  height: 400px;
+}
+
+.place-card .card-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+.place-card .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.place-card .card-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(25, 0, 0, 0.6), rgba(25, 0, 0, 0.5));
+}
+
+/* Footer Section */
+footer {
+  background-color: #f7f7f7;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px;
+}
+
+.footer-inner a {
+  text-decoration: none;
+  color: orange;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .banner-image .inner {
+    width: 100%;
+    left: 2%;
+  }
+
+  .img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .container {
+    /* padding: 0; */
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .row > * {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .banner-image .inner {
+    width: 100%;
+    left: 5%;
+  }
+
+  .inner h1 {
+    font-size: 50px;
+  }
+
+  .btn {
+    width: 90%;
+  }
+}
