@@ -1,42 +1,136 @@
-#root {
-  max-width: 1280px;
+.wrapper-width {
+  width: 90%;
+  background-color: white;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
+/* Header */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: 7vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-nav {
+  color: gray;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header-nav:hover {
+  color: black;
 }
 
-.card {
-  padding: 2em;
+.active {
+  color: black;
 }
 
-.read-the-docs {
-  color: #888;
+i {
+  color: gray;
+  font-size: 20px;
+}
+
+i:hover {
+  color: black;
+}
+
+.line {
+  border: 1px solid #d3d3d3;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.number-bikes {
+  border: 1px solid grey;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Cards */
+.bike-img {
+  width: 80%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.bikes-container {
+  display: flex;
+  flex-basis: 33.333%;
+}
+
+.bikes-container .card {
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.bikes-container .card:hover {
+  border: 2px solid orange;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.bikes-container .bike-img:hover {
+  transform: scale(1.1);
+}
+
+.bikes-container .card-body {
+  background-color: orange;
+  padding: 10px;
+  color: black;
+}
+
+.row {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.active-filter {
+  color: orange;
+}
+
+.active-filter .number-bikes {
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+}
+
+/* Footer  */
+footer {
+  background-color: #f8f8f8;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.social-icons i {
+  color: white;
+}
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+
+  border: 1px solid orange;
+  background-color: orange;
+  padding: 20px;
+}
+
+.social-icons a:hover {
+  background-color: rgb(178, 175, 175);
+  border: 1px solid rgb(178, 175, 175);
 }
