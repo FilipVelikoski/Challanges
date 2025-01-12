@@ -1,42 +1,163 @@
-#root {
-  max-width: 1280px;
+.wrapper {
   margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* navbar */
+.Navbar {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("../public/images/raw/Girls-Listen-Music_0.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 60vh;
+}
+
+.Navbar .title h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.Navbar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: white;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.line {
+  border: 1px solid #66faee;
+  padding: 10px;
+  background-color: #66faee;
+  width: 40%;
+}
+
+/* artists list */
+.artist-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  margin: 0px;
+  color: white;
+  border: 1px solid #2196f3;
+  padding: 10px;
+  background-color: #2196f3;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.artistList {
+  background-color: #d3d3d3;
+  padding: 30px;
+  width: 40%;
+}
+
+.artistList h2 {
+  font-weight: bold;
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+/* artist page */
+.artistPage-container {
+  background-color: #d3d3d3;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 40%;
+  text-align: center;
+}
+
+.artistPage {
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.artistPage p {
+  font-size: 20px;
+}
+
+.artistPage h2 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.artist-picture {
+  height: 20vh;
+}
+
+/* album page */
+.albumPage-container {
+  background-color: #d3d3d3;
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.albumPage {
+  padding: 30px;
+  width: 100%;
+}
+
+.album-img {
+  width: 200px;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+span {
+  color: grey;
+  font-weight: normal;
+}
+
+.albumPage p {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* mobile responsive */
+@media screen and (max-width: 425px) {
+  .Navbar {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .line {
+    width: 100%;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .artist-name {
+    width: 40%;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .artistList {
+    width: 100%;
+  }
 
-.read-the-docs {
-  color: #888;
+  .artistPage-container {
+    width: 100%;
+  }
+
+  .albumPage-container {
+    width: 100%;
+  }
 }
