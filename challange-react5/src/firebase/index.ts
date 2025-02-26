@@ -2,17 +2,15 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA33qrr0GlYzPlu-8Uo_io99ItpI5cKcxM",
-  authDomain: "my-projectfitnesstracker.firebaseapp.com",
+  apiKey: import.meta.env.FIREBASE_API_KEY,
+  authDomain: import.meta.env.FIREBASE_AUTH_DOMAIN,
   projectId: "my-projectfitnesstracker",
-  storageBucket: "my-projectfitnesstracker.firebasestorage.app",
+  storageBucket: import.meta.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: "800301650793",
-  appId: "1:800301650793:web:b132000dc7e959f150e3f8",
+  appId: import.meta.env.FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
@@ -26,3 +24,5 @@ googleProvider.addScope("https://www.googleapis.com/auth/contacts.readonly");
 const db = getFirestore(app);
 
 export { auth, googleProvider, db };
+
+// Link of the website https://my-projectfitnesstracker.web.app/
